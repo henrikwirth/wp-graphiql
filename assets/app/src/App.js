@@ -49,6 +49,7 @@ query GET_PAGES {
 `;
 
 const App = () => {
+	console.log("GraphiQL")
 	const _graphiql = GraphiQL
 	const [schema, setSchema] = useState(null)
 	const [query, setQuery] = useState(DEFAULT_QUERY)
@@ -64,6 +65,9 @@ const App = () => {
 				"Shift-Alt-LeftClick": _handleInspectOperation
 			});
 
+			console.log("Result", result)
+
+			console.log("Result data", result.data)
 			setSchema(buildClientSchema(result.data));
 		})
 	})
