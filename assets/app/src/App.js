@@ -144,7 +144,6 @@ const App = () => {
 				// makeDefaultArg={makeDefaultArg}
 			/>
 			<GraphiQL
-				ref={ref => (_graphiql = ref)}
 				fetcher={graphQLFetcher}
 				schema={schema}
 				query={query}
