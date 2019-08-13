@@ -50,12 +50,9 @@ query GET_PAGES {
 
 const App = () => {
 
-	const [state, setState] = useState({
-		schema: null,
-		query: DEFAULT_QUERY,
-		explorerIsOpen: true
-	})
-
+	const [schema, setSchema] = useState(null)
+	const [query, setQuery] = useState(DEFAULT_QUERY)
+	const [explorerIsOpen, setExplorerIsOpen] = useState(true)
 
 	useEffect(() => {
 		graphQLFetcher({
@@ -67,12 +64,12 @@ const App = () => {
 				"Shift-Alt-LeftClick": _handleInspectOperation
 			});
 
-			setState({schema: buildClientSchema(result.data)});
+			setSchema(buildClientSchema(result.data));
 		})
 	})
 
 	const _handleInspectOperation = (cm, mousePos) => {
-		const parsedQuery = parse(state.query || "");
+		const parsedQuery = parse(query || "");
 
 		if (!parsedQuery) {
 			console.error("Couldn't parse query document");
@@ -126,22 +123,22 @@ const App = () => {
 		el && el.scrollIntoView();
 	}
 
-	const _handleEditQuery = (query) => setState({ query })
+	const _handleEditQuery = (query) => setQuery(query)
 
 	const _handleToggleExplorer = () => {
-		setState({ explorerIsOpen: !state.explorerIsOpen })
+		setExplorerIsOpen(!explorerIsOpen)
 	}
 
 	return (
 		<div className="wrapper">
 			<GraphiQLExplorer
-				schema={state.schema}
-				query={state.query}
+				schema={schema}
+				query={query}
 				onEdit={_handleEditQuery}
 				onRunOperation={operationName =>
 					GraphiQL.handleRunQuery(operationName)
 				}
-				explorerIsOpen={state.explorerIsOpen}
+				explorerIsOpen={explorerIsOpen}
 				onToggleExplorer={_handleToggleExplorer}
 				// getDefaultScalarArgValue={getDefaultScalarArgValue}
 				// makeDefaultArg={makeDefaultArg}
@@ -149,8 +146,8 @@ const App = () => {
 			<GraphiQL
 				ref={ref => (GraphiQL = ref)}
 				fetcher={graphQLFetcher}
-				schema={state.schema}
-				query={state.query}
+				schema={schema}
+				query={query}
 				onEditQuery={_handleEditQuery}
 			>
 				<GraphiQL.Toolbar>
