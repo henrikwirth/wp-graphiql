@@ -1,14 +1,25 @@
 {
-  "main.css": "static/css/main.820e0136.css",
-  "main.css.map": "static/css/main.820e0136.css.map",
-  "main.js": "static/js/main.ef1c9dbe.js",
-  "main.js.map": "static/js/main.ef1c9dbe.js.map",
-  "static/media/GraphQLLanguageService.js.flow": "static/media/GraphQLLanguageService.js.661fe407.flow",
-  "static/media/autocompleteUtils.js.flow": "static/media/autocompleteUtils.js.4ce7ba19.flow",
-  "static/media/getAutocompleteSuggestions.js.flow": "static/media/getAutocompleteSuggestions.js.7f98f032.flow",
-  "static/media/getDefinition.js.flow": "static/media/getDefinition.js.4dbec62f.flow",
-  "static/media/getDiagnostics.js.flow": "static/media/getDiagnostics.js.65b0979a.flow",
-  "static/media/getHoverInformation.js.flow": "static/media/getHoverInformation.js.d9411837.flow",
-  "static/media/getOutline.js.flow": "static/media/getOutline.js.458a3518.flow",
-  "static/media/index.js.flow": "static/media/index.js.02c24280.flow"
+  "files": {
+    "main.css": "/static/css/main.2821c1cf.chunk.css",
+    "main.js": "/static/js/main.ffe4fd6c.chunk.js",
+    "main.js.map": "/static/js/main.ffe4fd6c.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.20f1542c.js",
+    "runtime~main.js.map": "/static/js/runtime~main.20f1542c.js.map",
+    "static/css/2.6872d12c.chunk.css": "/static/css/2.6872d12c.chunk.css",
+    "static/js/2.a1a0d8ce.chunk.js": "/static/js/2.a1a0d8ce.chunk.js",
+    "static/js/2.a1a0d8ce.chunk.js.map": "/static/js/2.a1a0d8ce.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.08cfc2caaafd910d5abdd382686629dc.js": "/precache-manifest.08cfc2caaafd910d5abdd382686629dc.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.6872d12c.chunk.css.map": "/static/css/2.6872d12c.chunk.css.map",
+    "static/css/main.2821c1cf.chunk.css.map": "/static/css/main.2821c1cf.chunk.css.map",
+    "static/media/GraphQLLanguageService.js.flow": "/static/media/GraphQLLanguageService.js.5ab204b9.flow",
+    "static/media/autocompleteUtils.js.flow": "/static/media/autocompleteUtils.js.4ce7ba19.flow",
+    "static/media/getAutocompleteSuggestions.js.flow": "/static/media/getAutocompleteSuggestions.js.7f98f032.flow",
+    "static/media/getDefinition.js.flow": "/static/media/getDefinition.js.4dbec62f.flow",
+    "static/media/getDiagnostics.js.flow": "/static/media/getDiagnostics.js.65b0979a.flow",
+    "static/media/getHoverInformation.js.flow": "/static/media/getHoverInformation.js.d9411837.flow",
+    "static/media/getOutline.js.flow": "/static/media/getOutline.js.c04e3998.flow",
+    "static/media/index.js.flow": "/static/media/index.js.02c24280.flow"
+  }
 }
