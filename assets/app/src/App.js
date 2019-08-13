@@ -49,7 +49,7 @@ query GET_PAGES {
 `;
 
 const App = () => {
-
+	const _graphiql = GraphiQL
 	const [schema, setSchema] = useState(null)
 	const [query, setQuery] = useState(DEFAULT_QUERY)
 	const [explorerIsOpen, setExplorerIsOpen] = useState(true)
@@ -58,7 +58,7 @@ const App = () => {
 		graphQLFetcher({
 			query: getIntrospectionQuery()
 		}).then(result => {
-			const editor = GraphiQL.getQueryEditor();
+			const editor = _graphiql.getQueryEditor();
 			editor.setOption("extraKeys", {
 				...(editor.options.extraKeys || {}),
 				"Shift-Alt-LeftClick": _handleInspectOperation
@@ -136,7 +136,7 @@ const App = () => {
 				query={query}
 				onEdit={_handleEditQuery}
 				onRunOperation={operationName =>
-					GraphiQL.handleRunQuery(operationName)
+					_graphiql.handleRunQuery(operationName)
 				}
 				explorerIsOpen={explorerIsOpen}
 				onToggleExplorer={_handleToggleExplorer}
@@ -144,7 +144,7 @@ const App = () => {
 				// makeDefaultArg={makeDefaultArg}
 			/>
 			<GraphiQL
-				ref={ref => (GraphiQL = ref)}
+				ref={ref => (_graphiql = ref)}
 				fetcher={graphQLFetcher}
 				schema={schema}
 				query={query}
@@ -152,12 +152,12 @@ const App = () => {
 			>
 				<GraphiQL.Toolbar>
 					<GraphiQL.Button
-						onClick={() => GraphiQL.handlePrettifyQuery()}
+						onClick={() => _graphiql.handlePrettifyQuery()}
 						label="Prettify"
 						title="Prettify Query (Shift-Ctrl-P)"
 					/>
 					<GraphiQL.Button
-						onClick={() => GraphiQL.handleToggleHistory()}
+						onClick={() => _graphiql.handleToggleHistory()}
 						label="History"
 						title="Show History"
 					/>
